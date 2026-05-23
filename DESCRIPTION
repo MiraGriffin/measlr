@@ -1,9 +1,12 @@
 Package: measlr
-Title: What the Package Does (One Line, Title Case)
+Title: Makes analysis of measles easier
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    c(
+    person("Mira", "Griffn", email = "mgriff@calpoly.edu", role = c("aut", "cre")),
+    person("Eloise", "Menedex", email = "esmelend@calpoly.edu", role = "aut"),
+    person("Chloe", "Schruter", email = "cbschurt@calpoly.edu", role = "aut"))
+Description: This package allows for people to take two measles datasets and make quick anlysis. It makes it easier to access the data sets, create plots and summarize data with simple functions.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8

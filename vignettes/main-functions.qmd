@@ -1,0 +1,34 @@
+---
+title: "main-functions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{main-functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(measlr)
+```
+
+```{r}
+mean_measles_per_month_for_countr(measles_data, country)
+```
+This should make a table for a specific country that outputs the mean measles incidence rate for each month, as well as the standard deviation,
+
+```{r}
+mean_measles_by_country(measles_data, urban_data, countries)
+```
+Takes a list of countries and creates a lollipop graph of each countries mean incidence rate. Then, the function adds a horizontal line corresponding to the overall mean measles incidence rate for each urban classification present in the list of countries.
+
+```{r}
+prepare_urban_pop_data(measles_data, urban_data)
+```
+Reads in a data set with urban populations, then combines it with the original measles data set. It then adds a column containing each countries urban classification. 
