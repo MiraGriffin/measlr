@@ -24,7 +24,7 @@ mean_measles_per_month_for_country(measles_data, country)
 This should make a table for a specific country that outputs the mean measles incidence rate for each month, as well as the standard deviation,
 
 ```{r}
-mean_measles_by_country(urban_data, countries)
+mean_measles_by_country(countries)
 ```
 Takes a list of countries and creates a lollipop graph of each countries mean incidence rate. Then, the function adds a horizontal line corresponding to the overall mean measles incidence rate for each urban classification present in the list of countries.
 
