@@ -7,10 +7,10 @@
 #'
 
 load_urban_data <- function(){
-  urban_df <- readr::read_csv("Urban Population Percentage Dataframe.csv")
-
+  data <- load_data()
+  urban_df <- data$urban
   cases_year_urban_pop_df <- dplyr::left_join(
-    cases_year,
+    data$cases_year,
     urban_df,
     by = "iso3"
   )

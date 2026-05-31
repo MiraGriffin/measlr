@@ -7,10 +7,14 @@
 #' @importFrom readr read_csv
 #' @export
 load_data <- function(){
-  readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-24/cases_month.csv')
-  readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-24/cases_year.csv')
-  readr::read_csv('Urban Population Percentage Dataframe.csv')
-  readr::read_csv('data-table.csv')
+  cases_month <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-24/cases_month.csv')
+  cases_year <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-24/cases_year.csv')
+  urban <- readr::read_csv('Urban Population Percentage Dataframe.csv')
+  list(
+    cases_month = cases_month,
+    cases_year = cases_year,
+    urban = urban
+  )
 }
 
 country <- function() {

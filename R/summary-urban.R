@@ -6,8 +6,8 @@
 #' @export
 
 mean_measles_per_month_for_country <- function(country_name) {
-
-  country_data <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-24/cases_month.csv') |>
+  data <- load_data()
+  country_data <- data$cases_month |>
     dplyr::filter(country == country_name)
 
   country_data |>
