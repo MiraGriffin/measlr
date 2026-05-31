@@ -15,3 +15,24 @@ test_that("output is a data frame", {
   expect_equal(result$sd_measles_incidence[1], round(922.900, 3))
 })
 
+test_that("returns one row per month", {
+
+  result <- mean_measles_per_month_for_country("China")
+
+  expect_equal(nrow(result), 12)
+})
+
+test_that("returns expected columns", {
+
+  result <- mean_measles_per_month_for_country("China")
+
+  expect_named(
+    result,
+    c(
+      "country",
+      "month",
+      "mean_measles_incidence",
+      "sd_measles_incidence"
+    )
+  )
+})
