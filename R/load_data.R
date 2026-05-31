@@ -9,8 +9,8 @@
 load_data <- function(){
   readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-24/cases_month.csv')
   readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-24/cases_year.csv')
-  readr::read_csv("Urban Population Percentage Dataframe.csv")
-  readr::read_csv("data-table.csv")
+  readr::read_csv('Urban Population Percentage Dataframe.csv')
+  readr::read_csv('data-table.csv')
 }
 
 country <- function() {
