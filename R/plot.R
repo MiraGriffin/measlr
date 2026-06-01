@@ -1,10 +1,8 @@
-#' A lollipop graph of each countries mean incidence rate.
+#' Merges urban data with cases_year data
 #'
-#' @param countries
+#' @return a data frame
 #'
-#' @return A graph
-#'
-#'
+#' @export
 
 load_urban_data <- function(){
   data <- load_data()
@@ -18,6 +16,12 @@ load_urban_data <- function(){
   return(cases_year_urban_pop_df)
 }
 
+#' Selects countries from urban data set and gives urban classification and mean measles incident rate
+#'
+#' @param df dataframe with urban populations
+#' @param country_iso3 iso3 of countries to be analyzed
+#'
+#' @return a data frame
 urban_type_incident <- function(df, country_iso3) {
 
   df |>
@@ -36,6 +40,9 @@ urban_type_incident <- function(df, country_iso3) {
     )
 }
 
+#' Joins the urban data set with urban classifications and the merged urban data set
+#'
+#' @return a dataframe
 urban_data <- function() {
   df <- load_urban_data()
 
@@ -54,7 +61,15 @@ urban_data <- function() {
   return(urban_pop_type_df)
 }
 
-
+#' A lollipop graph of each countries mean incidence rate.
+#'
+#' @param countries A character vector of country names
+#'
+#' @return A graph
+#'
+#' @import ggplot2
+#'
+#' @export
 mean_measles_by_country <- function(urban_data, countries){
 
   if (!all(countries %in% unique(urban_data$country))) {

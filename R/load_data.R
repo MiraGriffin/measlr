@@ -4,12 +4,15 @@
 #'
 #' @return A tibble with the loaded dataset.
 #'
-#' @importFrom readr read_csv
+#' @importFrom arrow read_parquet
 #' @export
 load_data <- function(){
-  cases_month <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-24/cases_month.csv')
-  cases_year <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-24/cases_year.csv')
-  urban <- readr::read_csv('Urban Population Percentage Dataframe.csv')
+  path1 <- system.file("extdata", "cases_month.parquet", package = "measlr")
+  cases_month <- read_parquet(path1)
+  path2 <- system.file("extdata", "cases_year.parquet", package = "measlr")
+  cases_year <- read_parquet(path2)
+  path3 <- system.file("extdata", "urban.parquet", package = "measlr")
+  urban <- read_parquet(path3)
   list(
     cases_month = cases_month,
     cases_year = cases_year,
@@ -17,12 +20,6 @@ load_data <- function(){
   )
 }
 
-country <- function() {
-  load_data() |>
-    distinct(country) |>
-    pull(country) |>
-    as.character()
-}
 
 
 

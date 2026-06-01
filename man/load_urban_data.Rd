@@ -2,13 +2,13 @@
 % Please edit documentation in R/plot.R
 \name{load_urban_data}
 \alias{load_urban_data}
-\title{A lollipop graph of each countries mean incidence rate.}
+\title{Merges urban data with cases_year data}
 \usage{
 load_urban_data()
 }
 \value{
-A graph
+a data frame
 }
 \description{
-A lollipop graph of each countries mean incidence rate.
+Merges urban data with cases_year data
 }

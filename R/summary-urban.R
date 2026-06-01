@@ -1,6 +1,6 @@
 #' A table for the selected country that includes mean and sd measles incidence.
 #'
-#' @param country
+#' @param country A country name
 #'
 #' @return A data frame with the country, mean incidence, and standard deviation of incidence.
 #' @export

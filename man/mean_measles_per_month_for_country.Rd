@@ -6,6 +6,9 @@
 \usage{
 mean_measles_per_month_for_country(country_name)
 }
+\arguments{
+\item{country}{A country name}
+}
 \value{
 A data frame with the country, mean incidence, and standard deviation of incidence.
 }

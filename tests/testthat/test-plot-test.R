@@ -1,11 +1,11 @@
 test_that("mean_measles_by_country returns a ggplot", {
 
   #Set up
-  data("cases_year", package = "measlr")
+
   data_urban <- urban_data()
-  countries <- c("United States", "India")
-  country <- "United States"
-  wrong_countries <- c("United States", "Denver")
+  countries <- c("China", "India")
+  country <- "China"
+  wrong_countries <- c("China", "Denver")
 
   multiple_countries <- mean_measles_by_country(data_urban, countries)
   one_country <- mean_measles_by_country(data_urban, country)
