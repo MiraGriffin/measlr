@@ -21,4 +21,5 @@ test_that("mean_measles_by_country returns a ggplot", {
     mean_measles_by_country(data_urban, wrong_countries),
     "One or more countries not found in dataset"
   )
+
 })

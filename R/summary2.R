@@ -14,6 +14,10 @@ country_incidence_summary <- function(country_iso3) {
   df<- load_urban_data()
   df <- data.table::as.data.table(df)
 
+  if(!(country_iso3 %in% df$iso3)){
+    stop("Country ISO3 code not found")
+  }
+
   df[
     ,
     urban_type := ifelse(
