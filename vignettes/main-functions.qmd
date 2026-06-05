@@ -19,7 +19,7 @@ library(measlr)
 ```
 
 ```{r}
-mean_measles_per_month_for_country(measles_data, country)
+mean_measles_per_month_for_country(measles_data, country_nam = "United States")
 ```
 This should make a table for a specific country that outputs the mean measles incidence rate for each month, as well as the standard deviation,
 
@@ -29,6 +29,11 @@ mean_measles_by_country(countries)
 Takes a list of countries and creates a lollipop graph of each countries mean incidence rate. Then, the function adds a horizontal line corresponding to the overall mean measles incidence rate for each urban classification present in the list of countries.
 
 ```{r}
-prepare_urban_pop_data(measles_data, urban_data)
+prepare_mean_measles_data(urban_data, countries)
 ```
-Reads in a data set with urban populations, then combines it with the original measles data set. It then adds a column containing each countries urban classification. 
+Filters the urban–measles data set to the selected countries, then computes mean measles incidence by country and by urban classification and returns a data frame to be used for plotting
+
+```{r}
+
+```
+

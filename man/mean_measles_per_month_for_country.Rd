@@ -4,10 +4,10 @@
 \alias{mean_measles_per_month_for_country}
 \title{A table for the selected country that includes mean and sd measles incidence.}
 \usage{
-mean_measles_per_month_for_country(country_name)
+mean_measles_per_month_for_country(country_name = "United States")
 }
 \arguments{
-\item{country}{A country name}
+\item{country_name}{A country name}
 }
 \value{
 A data frame with the country, mean incidence, and standard deviation of incidence.

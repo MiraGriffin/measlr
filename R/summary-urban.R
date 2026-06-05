@@ -1,11 +1,11 @@
 #' A table for the selected country that includes mean and sd measles incidence.
 #'
-#' @param country A country name
+#' @param country_name A country name
 #'
 #' @return A data frame with the country, mean incidence, and standard deviation of incidence.
 #' @export
 
-mean_measles_per_month_for_country <- function(country_name) {
+mean_measles_per_month_for_country <- function(country_name = "United States") {
   data <- load_data()
   country_data <- data$cases_month |>
     dplyr::filter(country == country_name)
