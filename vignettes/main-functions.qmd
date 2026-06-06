@@ -21,7 +21,7 @@ library(measlr)
 ```{r}
 mean_measles_per_month_for_country(measles_data, country_nam = "United States")
 ```
-This should make a table for a specific country that outputs the mean measles incidence rate for each month, as well as the standard deviation,
+This should make a table for a specific country that outputs the mean measles incidence rate for each month, as well as the standard deviation.
 
 ```{r}
 mean_measles_by_country(countries)
@@ -34,6 +34,6 @@ prepare_mean_measles_data(urban_data, countries)
 Filters the urban–measles data set to the selected countries, then computes mean measles incidence by country and by urban classification and returns a data frame to be used for plotting
 
 ```{r}
-
+country_plot(country_name)
 ```
-
+Takes one country and makes a bar graph of that country's measles cases per month. 
