@@ -37,3 +37,8 @@ Filters the urban–measles data set to the selected countries, then computes me
 country_plot(country_name)
 ```
 Takes one country and makes a bar graph of that country's measles cases per month. 
+
+```{r}
+country_incidence_summary("USA")
+```
+Summarizes measles incidence rate for the selected country from ISO3 code. The output includes the country's urban classification and the mean and standard deviation measles incidence rate per 1,000,000 population
