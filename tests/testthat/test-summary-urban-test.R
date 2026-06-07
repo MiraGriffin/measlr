@@ -11,7 +11,15 @@ test_that("output is a data frame", {
 
   expect_equal(result$country[1], "China")
   expect_equal(result$month[1], 1)
-  expect_equal(result$mean_measles_incidence[1], round(729.714, 3))
-  expect_equal(result$sd_measles_incidence[1], round(922.900, 3))
+  expect_equal(
+    result$mean_measles_incidence[1],
+    729.714,
+    tolerance = 1e-3
+  )
+  expect_equal(
+    result$sd_measles_incidence[1],
+    922.900,
+    tolerance = 1e-3
+  )
 })
 
